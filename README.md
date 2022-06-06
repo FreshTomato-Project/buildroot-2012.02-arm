@@ -45,3 +45,5 @@
   
 Enjoy!
   
+PS: thanks to @st_ty / @st-ty1 for initial idea: https://github.com/st-ty1/Artix_FreshTomato/tree/master/arm-uClibc-toolchain_buildroot
+  
