@@ -1,0 +1,57 @@
+--- a/arch/arm/include/asm/unistd.h
++++ b/arch/arm/include/asm/unistd.h
+@@ -152,7 +152,7 @@
+ #define __NR_adjtimex			(__NR_SYSCALL_BASE+124)
+ #define __NR_mprotect			(__NR_SYSCALL_BASE+125)
+ #define __NR_sigprocmask		(__NR_SYSCALL_BASE+126)
+-					/* 127 was sys_create_module */
++#define __NR_create_module		(__NR_SYSCALL_BASE+127)
+ #define __NR_init_module		(__NR_SYSCALL_BASE+128)
+ #define __NR_delete_module		(__NR_SYSCALL_BASE+129)
+ 					/* 130 was sys_get_kernel_syms */
+@@ -192,7 +192,7 @@
+ #define __NR_setresuid			(__NR_SYSCALL_BASE+164)
+ #define __NR_getresuid			(__NR_SYSCALL_BASE+165)
+ 					/* 166 was sys_vm86 */
+-					/* 167 was sys_query_module */
++#define __NR_query_module		(__NR_SYSCALL_BASE+167)
+ #define __NR_poll			(__NR_SYSCALL_BASE+168)
+ #define __NR_nfsservctl			(__NR_SYSCALL_BASE+169)
+ #define __NR_setresgid			(__NR_SYSCALL_BASE+170)
+--- a/include/linux/if_ppp.h
++++ b/include/linux/if_ppp.h
+@@ -114,14 +114,14 @@
+ 	__u16		tunnel_id;	/* redundant */
+ 	__u16		session_id;	/* if zero, get tunnel stats */
+ 	__u32		using_ipsec:1;	/* valid only for session_id == 0 */
+-	aligned_u64	tx_packets;
+-	aligned_u64	tx_bytes;
+-	aligned_u64	tx_errors;
+-	aligned_u64	rx_packets;
+-	aligned_u64	rx_bytes;
+-	aligned_u64	rx_seq_discards;
+-	aligned_u64	rx_oos_packets;
+-	aligned_u64	rx_errors;
++	__aligned_u64	tx_packets;
++	__aligned_u64	tx_bytes;
++	__aligned_u64	tx_errors;
++	__aligned_u64	rx_packets;
++	__aligned_u64	rx_bytes;
++	__aligned_u64	rx_seq_discards;
++	__aligned_u64	rx_oos_packets;
++	__aligned_u64	rx_errors;
+ };
+ 
+ #define ifr__name       b.ifr_ifrn.ifrn_name
+--- a/include/linux/inotify.h
++++ b/include/linux/inotify.h
+@@ -8,7 +8,9 @@
+ #define _LINUX_INOTIFY_H
+ 
+ /* For O_CLOEXEC and O_NONBLOCK */
++#ifdef __KERNEL
+ #include <linux/fcntl.h>
++#endif
+ #include <linux/types.h>
+ 
+ /*
