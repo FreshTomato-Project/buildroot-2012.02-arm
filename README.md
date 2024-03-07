@@ -51,7 +51,9 @@ Or manually do the following steps
     /wireguard:  
      ```netlink.h``` to ```output/host/hndtools-arm-linux-2.6.36-uclibc-4.5.3/arm-brcm-linux-uclibcgnueabi/sysroot/usr/include/linux/```  
   
+New toolchain is available in ```output/host/hndtools-arm-linux-2.6.36-uclibc-4.5.3```.
+  
 Enjoy!
   
-PS: thanks to @st_ty / @st-ty1 for initial idea: https://github.com/st-ty1/Artix_FreshTomato/tree/master/arm-uClibc-toolchain_buildroot
+PS: thanks to @st_ty / @st-ty1 for initial idea: https://github.com/st-ty1/Artix_FreshTomato/tree/master/gcc-4.5.3-toolchain_arm
   
