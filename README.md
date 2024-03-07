@@ -1,7 +1,7 @@
 # **buildroot-2012.02-ARM** #
   
   
-**Ready-to-use buildroot for ARM branch - tested only on Debian 10**
+**Ready-to-use buildroot for ARM branch - tested on Debian 10/11/12**
   
   
 To build the toolchain, just run:
