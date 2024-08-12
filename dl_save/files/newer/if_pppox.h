@@ -28,6 +28,10 @@
 #endif /* __KERNEL__ */
 #include <linux/if_pppol2tp.h>
 
+#if defined(CTF_PPTP) || defined(CTF_L2TP)
+#include <ctf/hndctf.h>
+#endif
+
 /* For user-space programs to pick up these definitions
  * which they wouldn't get otherwise without defining __KERNEL__
  */

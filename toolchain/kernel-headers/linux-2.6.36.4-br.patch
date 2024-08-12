@@ -18,31 +18,6 @@
  #define __NR_poll			(__NR_SYSCALL_BASE+168)
  #define __NR_nfsservctl			(__NR_SYSCALL_BASE+169)
  #define __NR_setresgid			(__NR_SYSCALL_BASE+170)
---- a/include/linux/if_ppp.h
-+++ b/include/linux/if_ppp.h
-@@ -114,14 +114,14 @@
- 	__u16		tunnel_id;	/* redundant */
- 	__u16		session_id;	/* if zero, get tunnel stats */
- 	__u32		using_ipsec:1;	/* valid only for session_id == 0 */
--	aligned_u64	tx_packets;
--	aligned_u64	tx_bytes;
--	aligned_u64	tx_errors;
--	aligned_u64	rx_packets;
--	aligned_u64	rx_bytes;
--	aligned_u64	rx_seq_discards;
--	aligned_u64	rx_oos_packets;
--	aligned_u64	rx_errors;
-+	__aligned_u64	tx_packets;
-+	__aligned_u64	tx_bytes;
-+	__aligned_u64	tx_errors;
-+	__aligned_u64	rx_packets;
-+	__aligned_u64	rx_bytes;
-+	__aligned_u64	rx_seq_discards;
-+	__aligned_u64	rx_oos_packets;
-+	__aligned_u64	rx_errors;
- };
- 
- #define ifr__name       b.ifr_ifrn.ifrn_name
 --- a/include/linux/inotify.h
 +++ b/include/linux/inotify.h
 @@ -8,7 +8,9 @@
