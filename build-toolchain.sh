@@ -24,7 +24,7 @@ cp -f $FILES/fixed/in.h $SYSROOT/usr/include/netinet/in.h
 
 #cp -f $FILES/newer/ctype.h $SYSROOT/usr/include/ctype.h
 cp -f $FILES/newer/if_pppol2tp.h $SYSROOT/usr/include/linux/if_pppol2tp.h
-cp -f $FILES/newer/if_pppox.h $SYSROOT/usr/include/linux/if_pppox.h # dodac nowa wersje!!! + patch kernel-headers !!! + .config !!!
+cp -f $FILES/newer/if_pppox.h $SYSROOT/usr/include/linux/if_pppox.h
 cp -f $FILES/newer/timex.h $SYSROOT/usr/include/sys/timex.h
 
 cp -f $FILES/pps/timepps.h $SYSROOT/usr/include/timepps.h
