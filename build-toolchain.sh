@@ -9,7 +9,7 @@ ret=$?
 } || {
 	FILES=./dl_save/files
 	HERE=$(pwd)
-	TOOLCHAIN=./output/host/hndtools-arm-linux-2.6.36-uclibc-4.5.3
+	TOOLCHAIN=./output/host/hndtools-arm-uclibc-5.3
 	SYSROOT=$TOOLCHAIN/arm-brcm-linux-uclibcgnueabi/sysroot
 
 	cd $TOOLCHAIN

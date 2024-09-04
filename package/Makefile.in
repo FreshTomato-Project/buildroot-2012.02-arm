@@ -153,7 +153,7 @@ SED:=$(shell which sed || type -p sed) -i -e
 
 HOST_CFLAGS   ?= -O2
 HOST_CFLAGS   += -I$(HOST_DIR)/include -I$(TOOLCHAINS_DIR)/include
-HOST_CXXFLAGS += -I$(HOST_DIR)/include -I$(TOOLCHAINS_DIR)/include
+HOST_CXXFLAGS += -I$(HOST_DIR)/include -I$(TOOLCHAINS_DIR)/include -std=c++11
 HOST_LDFLAGS  += -L$(HOST_DIR)/lib -L$(TOOLCHAINS_DIR)/lib -Wl,-rpath,$(TOOLCHAINS_DIR)/lib
 HOST_PATH=$(HOST_DIR)/bin:$(TOOLCHAINS_DIR)/bin:$(PATH)
 
