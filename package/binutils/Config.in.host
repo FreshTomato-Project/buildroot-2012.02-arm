@@ -55,7 +55,7 @@ config BR2_BINUTILS_VERSION
 	default "2.22"		if BR2_BINUTILS_VERSION_2_22
 	default "2.19.1"	if BR2_BINUTILS_VERSION_2_19
 	default "2.17"		if BR2_BINUTILS_VERSION_2_17
-	default "2.25.1"	if BR2_BINUTILS_VERSION_2_25.1
+	default "2.25.1"	if BR2_BINUTILS_VERSION_2_25_1
 
 config BR2_BINUTILS_EXTRA_CONFIG_OPTIONS
 	string "Additional binutils options"
