@@ -1,0 +1,17 @@
+Avoid gcc/reload1.c compile error when building with newer gcc (e.g. gcc 11.2 on Ubuntu 21.10).
+
+The error was:
+
+.../esp-open-sdk/crosstool-NG/.build/src/gcc-4.8.5/gcc/reload1.c:89:24: error: use of an operand of type 'bool' in 'operator++' is forbidden in C++17
+
+--- a/gcc/reload1.c
++++ b/gcc/reload1.c
+@@ -440,7 +440,7 @@
+ 
+   while (memory_address_p (QImode, tem))
+     {
+-      spill_indirect_levels++;
++      spill_indirect_levels = 1;
+       tem = gen_rtx_MEM (Pmode, tem);
+     }
+ 
