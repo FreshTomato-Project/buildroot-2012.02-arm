@@ -25,7 +25,6 @@ ret=$?
 	cp -f $FILES/newer/if_pppol2tp.h $SYSROOT/usr/include/linux/if_pppol2tp.h
 	cp -f $FILES/newer/if_pppox.h $SYSROOT/usr/include/linux/if_pppox.h
 	cp -f $FILES/pps/timepps.h $SYSROOT/usr/include/timepps.h
-	cp -f $FILES/wireguard/netlink.h $SYSROOT/usr/include/linux/netlink.h
 
 	echo -e "\nToolchain successfully built!\n\n"
 }
