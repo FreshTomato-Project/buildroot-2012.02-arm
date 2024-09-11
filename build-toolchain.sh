@@ -22,8 +22,6 @@ ret=$?
 	rm -f $TOOLCHAIN/lib/libc.a
 
 	cp -f $FILES/fixed/in.h $SYSROOT/usr/include/netinet/in.h
-	cp -f $FILES/newer/if_pppol2tp.h $SYSROOT/usr/include/linux/if_pppol2tp.h
-	cp -f $FILES/newer/if_pppox.h $SYSROOT/usr/include/linux/if_pppox.h
 	cp -f $FILES/pps/timepps.h $SYSROOT/usr/include/timepps.h
 
 	echo -e "\nToolchain successfully built!\n\n"
