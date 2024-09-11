@@ -4,7 +4,7 @@
 #
 #############################################################
 
-MPC_VERSION = 1.0.3
+MPC_VERSION = 0.9
 MPC_SITE = http://www.multiprecision.org/mpc/download
 MPC_INSTALL_STAGING = YES
 MPC_DEPENDENCIES = gmp mpfr
