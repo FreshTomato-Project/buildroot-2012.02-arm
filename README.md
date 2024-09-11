@@ -6,7 +6,7 @@
   
 To build the toolchain:
 
-1. Pack the ```/home/[username]/freshtomato-arm/release/src-rt-6.x.4708/linux/linux-2.6.36``` subdirectory ```linux-2.6.36.4.tar.bz2``` file and put it in the dl_save folder in buildroot.
+1. Pack the ```/home/[username]/freshtomato-arm/release/src-rt-6.x.4708/linux/linux-2.6.36``` subdirectory into ```linux-2.6.36.4.tar.bz2``` file and put it in the dl_save folder in buildroot.
 
 
 2. Run:
