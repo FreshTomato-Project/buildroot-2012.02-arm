@@ -137,6 +137,7 @@ GCC_WITH_HOST_MPC = --with-mpc=$(TOOLCHAINS_DIR)
 GCC_TARGET_PREREQ += mpc
 ifeq ($(BR2_TOOLCHAIN_BUILDROOT),y)
 HOST_SOURCE += host-mpc-source
+HOST_CONFIGURE_OPTS += --disable-libsanitizer
 endif
 GCC_HOST_PREREQ += host-mpc
 endif
@@ -241,7 +242,6 @@ $(GCC_BUILD_DIR1)/.configured: $(GCC_DIR)/.patched
 		--without-headers \
 		--with-newlib \
 		--disable-multilib \
-		--disable-libsanitizer \
 		$(GCC_TLS) \
 		$(GCC_WITH_HOST_GMP) \
 		$(GCC_WITH_HOST_MPFR) \
@@ -309,7 +309,6 @@ $(GCC_BUILD_DIR2)/.configured: $(GCC_DIR)/.patched
 		--enable-shared \
 		--disable-libssp \
 		--disable-multilib \
-		--disable-libsanitizer \
 		$(GCC_TLS) \
 		$(GCC_WITH_HOST_GMP) \
 		$(GCC_WITH_HOST_MPFR) \
@@ -389,7 +388,6 @@ $(GCC_BUILD_DIR3)/.configured: $(GCC_SRC_DIR)/.patched $(GCC_STAGING_PREREQ)
 		--with-gnu-ld \
 		--disable-libssp \
 		--disable-multilib \
-		--disable-libsanitizer \
 		$(GCC_TLS) \
 		$(GCC_SHARED_LIBGCC) \
 		$(GCC_WITH_HOST_GMP) \
@@ -530,7 +528,6 @@ $(GCC_BUILD_DIR4)/.configured: $(GCC_BUILD_DIR4)/.prepared
 		--with-gnu-ld \
 		--disable-libssp \
 		--disable-multilib \
-		--disable-libsanitizer \
 		$(GCC_TLS) \
 		$(GCC_SHARED_LIBGCC) \
 		$(DISABLE_NLS) \
